@@ -1,0 +1,23 @@
+<view>
+<scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+  <view wx:for="{{res}}" data-id="{{index}}" wx:key="id" style="width:100%;border-bottom:1px solid #ccc;background-color: #13b5f5;">
+  
+  <view class="up-down textFont"> 
+  <view class="left-right verticalcenter linemargin">
+  <text class="left">{{item.name}}</text>
+  <button class="connectbutton" bindtap="connect">connect</button>
+  </view>
+  <view class="left-right">
+  <view class="up-down smallFont">
+  <image class='iconImage' src="{{item.triggerimg}}" ></image>
+<!-- {{item.triggerchannel}} -->
+  </view>
+  <view class="up-down smallFont">
+  <image class='iconImage' src="{{item.actionimg}}"></image>
+ <!-- {{item.actionchannel}} -->
+  </view>
+   </view>
+ </view>
+  </view>
+</scroll-view>
+</view>
