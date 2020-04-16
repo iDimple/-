@@ -1,0 +1,42 @@
+.up-down{
+  margin:10rpx;
+flex-direction: column;
+display: flex;
+}
+.left-right{
+display: flex;
+flex-direction: row;
+}
+.iconImage {
+    width: 100rpx;
+    height: 100rpx;
+}
+.textFont{
+  color:white;
+}
+.smallFont{
+  font-size: small;
+}
+
+.linemargin{
+  margin:10rpx;
+}
+.left{
+  width:75%;
+}
+.connectbutton{
+  width: 25%;
+  height:60rpx;
+  background-color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size:small;
+}
+
+.verticalcenter{
+height:100%;
+line-height: 100%;
+}

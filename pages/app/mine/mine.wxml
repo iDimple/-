@@ -1,8 +1,8 @@
 <view class='container'>
 
   <view class='tab-wrapper'>
-    <view id='tableft' class='tab-left {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>电影</view>
-    <view id='tabright' class='tab-right {{currentTab === 1 ? "tab-active" : ""}}' bindtap='switchTab'>音乐</view>
+    <view id='tableft' class='tab-left {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>Channel</view>
+    <view id='tabright' class='tab-right {{currentTab === 1 ? "tab-active" : ""}}' bindtap='switchTab'>Rule</view>
   </view>
 
   <view class='content-wrapper' wx:if='{{currentTab === 0}}'><movie/></view>

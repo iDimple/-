@@ -49,7 +49,7 @@
   height: 10%;
   position: fixed;
   bottom:120rpx;
-  width: 100%;
+  width: 96%;
   z-index: 10;
 }
 .sendMsg{
@@ -58,13 +58,13 @@
 }
 
 .inputMsg{
-  width: 75%;
+  width: 74%;
   margin-left: 5px;
   height: 100%;
   padding-left: 10px;
   border-top-color: #fff;
   border-bottom-color: #EFD6F5;
-  background-color: #11EEEE;
+  background-color: white;
 }
 .sendBtn{
   display: inline-block;

@@ -1,0 +1,104 @@
+.up-down{
+  margin:10rpx;
+flex-direction: column;
+display: flex;
+}
+.left-right{
+display: flex;
+flex-direction: row;
+}
+.iconImage {
+    width: 100rpx;
+    height: 100rpx;
+}
+.textFont{
+  color:white;
+}
+.smallFont{
+  font-size: small;
+}
+
+.linemargin{
+  margin:10rpx;
+}
+.left{
+  width:75%;
+}
+.btn{
+  background-color: white;
+  border-radius: 98rpx;
+  align-items: center;
+  justify-content: center;
+  font-size:small;
+  margin-top: 10px;
+  height:32px;
+}
+.connectbutton{
+  width: 25%;
+  height:40rpx;
+  background-color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size:small;
+  margin-top: 10px;
+  position:absolute;
+  right:10px;
+}
+
+.verticalcenter{
+height:42px;
+line-height: 42px;
+}
+
+.select_box{
+  background: #fff;
+  width: 80%;
+  margin: 30rpx auto;
+  position: relative;
+ }
+ .select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+ }
+ .select_text{
+  font-size: 30rpx;
+  flex: 1;
+ }
+ .select_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+ }
+ .select_img_rotate{
+  transform:rotate(180deg); 
+ }
+ .option_box{
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+ }
+ .option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+  z-index:100;
+ }

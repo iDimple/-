@@ -14,7 +14,7 @@ Component({
   data: {
     msgList: [{
       type: 1,
-      msg: "可以随便问我问题哦!",
+      msg: "I can help you make new rules!",
       key: (new Date()).valueOf
     }],
     userName: "",
@@ -23,71 +23,34 @@ Component({
     searchinput: ""
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  
+  created:function(){
+    console.log("created");
+  },
+  attached: function () {  
     this.getUser()
     var that = this
     wx.getSystemInfo({
       success: function (res) {
-
+console.log(res.windowHeight)
         that.setData({
-          scrollHeight: res.windowHeight
+          scrollHeight: res.windowHeight-92
         });
       }
-    });
+    });},
+  ready:function(){
+    console.log("ready");
+  },
+  moved: function () {console.log("moved"); },
+  detached: function () { console.log("detached");},
+  error:function(){
+    console.log("error");
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 组件的方法列表
    */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
+  methods: {
   /**
    * 获取用户信息
    */
@@ -120,7 +83,7 @@ Component({
     })
     if (!this.isEmpty(msg)) {
       wx.showToast({
-        title: '不能发送空信息',
+        title: 'please say something~',
         icon: 'none'
       })
       return
@@ -140,7 +103,7 @@ Component({
   },
   //回复消息
   editorMsg: function (data, msgList, charlenght) {
-    msgList = []
+
     msgList.push({
       type: 1,
       msg: "hello",
@@ -162,7 +125,7 @@ Component({
     var timestamp = new Date().getTime()
 
     wx.request({
-      url: 'http://202.120.40.28:4460/$/stats/ifttt',
+      url: 'https://a1.cnblogs.com/group/T2',
       method: "get",
       data: {
         timestamp: timestamp
@@ -172,18 +135,18 @@ Component({
       },
       success: function (res) {
         console.log(res)
-        var msgList = that.cookies
+        var msgList = that.data.msgList
         var charlenght = 0
         that.editorMsg(res.data, msgList, charlenght)
-        that.setData({
-          msgList: msgList,
-        })
+        // that.setData({
+        //   msgList: msgList,
+        // })
       },
       fail: function (res) {
         var msgList = that.data.msgList
         msgList.push({
           type: 1,
-          msg: "出错了!",
+          msg: "error!",
           key: (new Date()).valueOf
         })
         that.setData({
@@ -191,12 +154,6 @@ Component({
         })
       }
     })
-  },
-
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
+  }
   }
 })
